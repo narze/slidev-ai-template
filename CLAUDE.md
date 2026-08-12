@@ -26,3 +26,7 @@ every `---` line starts a new slide.
   file edits for authoring prose/content within a slide.
 - `pnpm build` produces a static site in `dist/`; the `deploy.yml` workflow
   publishes it to GitHub Pages on push to `main`.
+- `vite.config.ts` suppresses Slidev's full page reload on headmatter edits, so
+  editing the deck's first frontmatter block no longer discards in-progress
+  typing. The tradeoff: headmatter changes (theme, transition, title) apply on
+  the next manual browser refresh instead of instantly.
